@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+@import "../../styles/global.mixins.scss";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem;
+  width: $content-width;
+
+  @include responsiveMax($screen-md) {
+    width: 100%;
+  }
+
+  nav {
+    .toggleMenu {
+      display: none;
+      border: 0;
+      background-color: transparent;
+
+      @include responsiveMax($screen-xs) {
+        display: inline;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      list-style: none;
+      font-size: 1.6rem;
+
+      li {
+        cursor: pointer;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      &:not(.active) {
+        @include responsiveMax($screen-xs) {
+          display: none;
+        }
+      }
+
+      &.active {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 130px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        background-color: white;
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.4rem;
+
+    @include responsiveMax($screen-sm) {
+      display: none;
+    }
+  }
+}
