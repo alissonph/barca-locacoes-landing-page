@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 
 import ContactForm from "../ContactForm";
 import { useHome } from "../../contexts/HomeContext";
+import { prefix } from "../../utils/prefix";
 
 import styles from "./styles.module.scss";
 
@@ -63,7 +64,7 @@ export default function Content() {
               <li>Toalhas em várias cores. Tecido especial.</li>
             </ul>
           </div>
-          <img src="/400x400.png" alt="Teste" />
+          <img src={`${prefix}/400x400.png`} alt="Imagem" />
         </div>
       </div>
 

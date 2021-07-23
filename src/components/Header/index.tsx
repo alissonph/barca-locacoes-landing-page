@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { useState } from "react";
 import { useHome } from "../../contexts/HomeContext";
+import { prefix } from "../../utils/prefix";
 
 import styles from "./styles.module.scss";
 
@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <img src="/logo.png" alt="Logotipo da empresa" />
+      <img src={`${prefix}/logo.png`} alt="Logotipo da empresa" />
 
       <nav>
         <button
@@ -24,7 +24,11 @@ export default function Header() {
           onClick={toggleMenu}
         >
           <img
-            src={menuActive ? "/close_icon.svg" : "/menu_icon.svg"}
+            src={
+              menuActive
+                ? `${prefix}/close_icon.svg`
+                : `${prefix}/menu_icon.svg`
+            }
             alt="Ícone para abrir e fechar o menu no celular"
           />
         </button>

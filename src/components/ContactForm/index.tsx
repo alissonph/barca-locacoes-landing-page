@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 
+import { prefix } from "../../utils/prefix";
+
 import styles from "./styles.module.scss";
 
 type ContactForm = {
@@ -47,7 +49,7 @@ export default function ContactForm() {
         onClick={openWhatsappLink}
       >
         Solicitar Orçamento via Whatsapp
-        <img src="/whatsapp_icon.png" alt="Ícone do Whatsapp" />
+        <img src={`${prefix}/whatsapp_icon.png`} alt="Ícone do Whatsapp" />
       </button>
       <span>OU</span>
       <div className={styles.formContainer}>

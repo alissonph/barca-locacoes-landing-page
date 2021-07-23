@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { prefix } from "../../utils/prefix";
+
 import styles from "./styles.module.scss";
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
       <span className={styles.facebook}>
         Curta nossa página:{" "}
         <a href="http://www.facebook.com.br/BarcaLocacoes">
-          <img src="/facebook_icon.svg" alt="Ícone do Facebook" />
+          <img src={`${prefix}/facebook_icon.svg`} alt="Ícone do Facebook" />
         </a>
       </span>
     </div>
