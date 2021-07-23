@@ -28,6 +28,7 @@
   flex-direction: row;
   gap: 2rem;
   font-size: 1.4rem;
+  margin-bottom: 1rem;
 
   @include responsiveMax($screen-sm) {
     flex-direction: column;
