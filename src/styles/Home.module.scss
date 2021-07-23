@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #f9f9f9;
 }
 
 .main {
@@ -26,5 +27,13 @@
   align-items: center;
 
   width: 100vw;
-  background-color: $primary-color;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 100vw;
+  border-top: 1px solid rgb(236, 236, 236);
 }

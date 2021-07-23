@@ -25,7 +25,9 @@ export default function Home() {
         <Content />
       </main>
 
-      <Footer />
+      <footer className={styles.footer}>
+        <Footer />
+      </footer>
     </div>
   );
 }

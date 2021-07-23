@@ -2,4 +2,66 @@
 @import "../../styles/global.mixins.scss";
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  gap: 2rem;
+  font-size: 1.2rem;
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    font-size: 1.4rem;
+  }
+}
+
+.formContainer {
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+}
+
+.errorMessage {
+  font-size: 1.2rem;
+  color: red;
+}
+
+.buttonWhatsapp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: $tertiary-color;
+  }
+}
+
+.buttonSend {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: $tertiary-color;
+  }
 }

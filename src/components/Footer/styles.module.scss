@@ -16,10 +16,6 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-
-    Image:hover {
-      color: red;
-    }
   }
 
   @include responsiveMax($screen-md) {

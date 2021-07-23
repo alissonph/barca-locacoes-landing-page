@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <div className={styles.footer}>
       <span>© 2021 Barca Locações. Todos os direitos reservados.</span>
       <span className={styles.facebook}>
         Curta nossa página:{" "}
@@ -16,6 +16,6 @@ export default function Footer() {
           />
         </a>
       </span>
-    </footer>
+    </div>
   );
 }

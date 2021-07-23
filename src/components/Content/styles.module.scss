@@ -25,15 +25,30 @@
   align-items: center;
   justify-content: center;
 
-  text-align: justify;
+  text-align: center;
 
-  padding: 1rem;
   width: 230px;
   height: 250px;
-  background-color: white;
-  border-radius: 0.5rem;
 
   img {
     border-radius: 0.5rem;
+  }
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @include responsiveMax($screen-sm) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map {
+    width: 100%;
+    border: 0;
   }
 }
