@@ -1,12 +1,46 @@
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 import ContactForm from "../ContactForm";
+import { useHome } from "../../contexts/HomeContext";
 
 import styles from "./styles.module.scss";
 
 export default function Content() {
+  const { isScrollingToAboutUs, isScrollingToContact, finishScroll } =
+    useHome();
+
+  const aboutUsRef = useRef<HTMLHeadingElement>(null);
+  const contactRef = useRef<HTMLHeadingElement>(null);
+
+  function scrollToAboutUs() {
+    if (aboutUsRef && aboutUsRef.current) {
+      aboutUsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+  function scrollToContact() {
+    if (contactRef && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  useEffect(() => {
+    if (isScrollingToAboutUs) {
+      scrollToAboutUs();
+      finishScroll();
+    }
+  }, [isScrollingToAboutUs, finishScroll]);
+
+  useEffect(() => {
+    if (isScrollingToContact) {
+      scrollToContact();
+      finishScroll();
+    }
+  }, [isScrollingToContact, finishScroll]);
+
   return (
     <div className={styles.container}>
+      <h1 ref={aboutUsRef}>SOBRE NÓS</h1>
       <div className={styles.cards}>
         <div className={styles.card}>
           <Image src="/200.png" alt="Teste" width={200} height={200} />
@@ -26,6 +60,7 @@ export default function Content() {
         </div>
       </div>
 
+      <h1 ref={contactRef}>CONTATO</h1>
       <div className={styles.contactContainer}>
         <iframe
           className={styles.map}

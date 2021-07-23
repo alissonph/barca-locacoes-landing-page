@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { useState } from "react";
+import { useHome } from "../../contexts/HomeContext";
 
 import styles from "./styles.module.scss";
 
 export default function Header() {
   const [menuActive, setMenuActive] = useState(false);
+
+  const { scrollToAboutUs, scrollToContact } = useHome();
 
   function toggleMenu() {
     setMenuActive(!menuActive);
@@ -33,8 +36,8 @@ export default function Header() {
           />
         </button>
         <ul className={menuActive ? styles.active : ""}>
-          <li>Sobre</li>
-          <li>Contato</li>
+          <li onClick={scrollToAboutUs}>Sobre</li>
+          <li onClick={scrollToContact}>Contato</li>
         </ul>
       </nav>
 

@@ -88,6 +88,8 @@ export default function ContactForm() {
             <textarea
               id="message"
               {...register("message", { required: true })}
+              defaultValue="Olá, gostaria de um orçamento"
+              rows="4"
             ></textarea>
             {errors.message?.type === "required" && (
               <span className={styles.errorMessage}>
