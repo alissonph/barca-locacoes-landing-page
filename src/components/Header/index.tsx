@@ -15,12 +15,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <Image
-        src="/logo.png"
-        alt="Logotipo da empresa"
-        width={233}
-        height={101}
-      />
+      <img src="/logo.png" alt="Logotipo da empresa" />
 
       <nav>
         <button
@@ -28,11 +23,9 @@ export default function Header() {
           className={styles.toggleMenu}
           onClick={toggleMenu}
         >
-          <Image
+          <img
             src={menuActive ? "/close_icon.svg" : "/menu_icon.svg"}
             alt="Ícone para abrir e fechar o menu no celular"
-            width={35}
-            height={35}
           />
         </button>
         <ul className={menuActive ? styles.active : ""}>

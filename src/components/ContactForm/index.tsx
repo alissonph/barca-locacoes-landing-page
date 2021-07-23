@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useForm } from "react-hook-form";
 
 import styles from "./styles.module.scss";
@@ -48,12 +47,7 @@ export default function ContactForm() {
         onClick={openWhatsappLink}
       >
         Solicitar Orçamento via Whatsapp
-        <Image
-          src="/whatsapp_icon.png"
-          alt="Ícone do Whatsapp"
-          width={24}
-          height={24}
-        />
+        <img src="/whatsapp_icon.png" alt="Ícone do Whatsapp" />
       </button>
       <span>OU</span>
       <div className={styles.formContainer}>

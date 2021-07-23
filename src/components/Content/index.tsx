@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 
 import ContactForm from "../ContactForm";
 import { useHome } from "../../contexts/HomeContext";
@@ -64,7 +63,7 @@ export default function Content() {
               <li>Toalhas em várias cores. Tecido especial.</li>
             </ul>
           </div>
-          <Image src="/500.png" alt="Teste" width={500} height={400} />
+          <img src="/400x400.png" alt="Teste" />
         </div>
       </div>
 

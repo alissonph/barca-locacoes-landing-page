@@ -8,12 +8,7 @@ export default function Footer() {
       <span className={styles.facebook}>
         Curta nossa página:{" "}
         <a href="http://www.facebook.com.br/BarcaLocacoes">
-          <Image
-            src="/facebook_icon.svg"
-            alt="Ícone do Facebook"
-            width={20}
-            height={20}
-          />
+          <img src="/facebook_icon.svg" alt="Ícone do Facebook" />
         </a>
       </span>
     </div>
