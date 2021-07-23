@@ -14,12 +14,19 @@
     width: 100%;
   }
 
+  @include responsiveMax($screen-xs) {
+    flex-direction: column;
+  }
+
   nav {
     .toggleMenu {
       display: none;
 
       @include responsiveMax($screen-xs) {
         display: inline;
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
       }
     }
 
@@ -29,6 +36,13 @@
       gap: 3rem;
       list-style: none;
       font-size: 1.6rem;
+
+      @include responsiveMax($screen-xs) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+      }
 
       li {
         cursor: pointer;
@@ -41,21 +55,6 @@
         @include responsiveMax($screen-xs) {
           display: none;
         }
-      }
-
-      &.active {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 130px;
-        margin: 0 auto;
-        padding: 1rem;
-
-        background-color: white;
       }
     }
   }

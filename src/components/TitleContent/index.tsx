@@ -12,7 +12,7 @@ export default function TitleContent() {
             A Barca locações trabalha com os seguintes serviços: Locação de
             mesas, cadeiras, toalhas. Para festas e eventos. Atendemos nas
             seguintes cidades: Artur Nogueira, Cosmópolis, Engenheiro Coelho e
-            Holambra(Outras cidades sob consulta).
+            Holambra (Outras cidades sob consulta).
           </span>
         </div>
       </div>

@@ -43,20 +43,28 @@ export default function Content() {
       <h1 ref={aboutUsRef}>SOBRE NÓS</h1>
       <div className={styles.cards}>
         <div className={styles.card}>
-          <Image src="/200.png" alt="Teste" width={200} height={200} />
-          <span>
-            Cadeiras com logotipo da empresa estampada, de alta qualidade.
-          </span>
-        </div>
-        <div className={styles.card}>
-          <Image src="/200.png" alt="Teste" width={200} height={200} />
-          <span>
-            Mesas com logotipo da empresa estampada, de alta qualidade.
-          </span>
-        </div>
-        <div className={styles.card}>
-          <Image src="/200.png" alt="Teste" width={200} height={200} />
-          <span>Toalhas em várias cores. Tecido especial.</span>
+          <div>
+            <p>
+              A Barca Locações é uma empresa de locações de materias para festas
+              e eventos (cadeiras, mesas, toalhas).
+            </p>
+            <p>
+              Situada em Artur Nogueira, prestamos serviços para a própria
+              cidade, para Cosmópolis, Engenheiro Coelho e Holambra (outras
+              cidades sob consulta).
+            </p>
+            <p>Nossos produtos:</p>
+            <ul>
+              <li>
+                Cadeiras com logotipo da empresa estampada, de alta qualidade.
+              </li>
+              <li>
+                Mesas com logotipo da empresa estampada, de alta qualidade.
+              </li>
+              <li>Toalhas em várias cores. Tecido especial.</li>
+            </ul>
+          </div>
+          <Image src="/500.png" alt="Teste" width={500} height={400} />
         </div>
       </div>
 

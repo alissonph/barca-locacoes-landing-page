@@ -29,10 +29,10 @@ export default function Header() {
           onClick={toggleMenu}
         >
           <Image
-            src="/menu_icon.svg"
-            alt="Ícone para abrir o menu no celular"
-            width={40}
-            height={40}
+            src={menuActive ? "/close_icon.svg" : "/menu_icon.svg"}
+            alt="Ícone para abrir e fechar o menu no celular"
+            width={35}
+            height={35}
           />
         </button>
         <ul className={menuActive ? styles.active : ""}>
