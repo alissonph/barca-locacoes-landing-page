@@ -1,15 +1,14 @@
-//import sgMail from '@sendgrid/mail'
+import sgMail from '@sendgrid/mail'
 import { NextApiRequest, NextApiResponse } from 'next';
 
-//sgMail.setApiKey(process.env.EMAIL_API_KEY);
+const EMAIL_API_KEY = process.env.EMAIL_API_KEY || '';
+sgMail.setApiKey(EMAIL_API_KEY);
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'Enviado com sucesso!' })
-
-  /*const { email, subject, message, name } = req.body
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { subject, message, name } = req.body
   const msg = {
-    to: '<your-email@example.com',
-    from: email,
+    to: 'rolandoh@outlook.com.br',
+    from: 'contato.barcalocacoes@gmail.com',
     subject,
     name,
     text: message,
@@ -17,8 +16,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     await sgMail.send(msg);
-    res.json({ message: `Email has been sent` })
+    res.json({ message: 'E-mail enviado com sucesso!' });
   } catch (error) {
-    res.status(500).json({ error: 'Error sending email' })
-  }*/
+    console.log(error);
+    res.status(500).json({ error: 'Erro ao enviar e-mail' });
+  }
 }

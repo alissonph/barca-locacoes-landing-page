@@ -1,10 +1,13 @@
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { prefix } from "../../utils/prefix";
 
 import styles from "./styles.module.scss";
 
 type ContactForm = {
+  subject: string;
   name: string;
   phone: string;
   message: string;
@@ -15,10 +18,37 @@ export default function ContactForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
-  function onSubmit(data: ContactForm) {
-    console.log(data);
+  async function onSubmit(data: ContactForm) {
+    data.subject = `Barca Locações - Contato via site - ${new Date().toLocaleString(
+      "pt-BR"
+    )}`;
+    data.message = `Nome: ${data.name} - Telefone: ${data.phone} - Mensagem: ${data.message}`;
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      toast.success(
+        "E-mail enviado com sucesso, em breve entraremos em contato.",
+        {
+          position: "bottom-center",
+          autoClose: 5000,
+        }
+      );
+
+      reset();
+    } catch (error) {
+      toast.error("Erro ao enviar o e-mail, por favor tente novamente.", {
+        position: "bottom-center",
+        autoClose: 5000,
+      });
+    }
   }
 
   function openWhatsappLink() {
@@ -99,6 +129,8 @@ export default function ContactForm() {
           </button>
         </form>
       </div>
+
+      <ToastContainer />
     </div>
   );
 }
