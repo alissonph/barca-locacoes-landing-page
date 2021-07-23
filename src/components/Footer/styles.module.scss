@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+@import "../../styles/global.mixins.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: $content-width;
+  height: 50px;
+  padding: 2rem;
+  font-size: 1.1rem;
+
+  .facebook {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    Image:hover {
+      color: red;
+    }
+  }
+
+  @include responsiveMax($screen-md) {
+    width: 100%;
+  }
+
+  @include responsiveMax($screen-xs) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

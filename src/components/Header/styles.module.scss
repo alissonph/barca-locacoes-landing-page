@@ -17,8 +17,6 @@
   nav {
     .toggleMenu {
       display: none;
-      border: 0;
-      background-color: transparent;
 
       @include responsiveMax($screen-xs) {
         display: inline;

@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+@import "../../styles/global.mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  width: $content-width;
+
+  @include responsiveMax($screen-md) {
+    width: 100%;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: justify;
+
+  padding: 1rem;
+  width: 230px;
+  height: 250px;
+  background-color: white;
+  border-radius: 0.5rem;
+
+  img {
+    border-radius: 0.5rem;
+  }
+}

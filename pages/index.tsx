@@ -1,5 +1,10 @@
 import Head from "next/head";
+
 import Header from "../src/components/Header";
+import TitleContent from "../src/components/TitleContent";
+import Content from "../src/components/Content";
+import Footer from "../src/components/Footer";
+
 import styles from "../src/styles/Home.module.scss";
 
 export default function Home() {
@@ -12,12 +17,15 @@ export default function Home() {
 
       <Header />
 
-      <main className={styles.main}>TESTE</main>
+      <main className={styles.main}>
+        <TitleContent />
+      </main>
 
-      <footer className={styles.footer}>
-        <span>© 2021 Barca Locações. Todos os direitos reservados.</span>
-        <span>Curta nossa página: FACEBOOK</span>
-      </footer>
+      <main className={styles.mainSecondary}>
+        <Content />
+      </main>
+
+      <Footer />
     </div>
   );
 }

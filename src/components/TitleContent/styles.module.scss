@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+@import "../../styles/global.mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  width: $content-width;
+
+  @include responsiveMax($screen-md) {
+    width: 100%;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  background-color: #00a85ac4;
+  border-radius: 1rem;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.subTitle {
+  font-size: 2rem;
+  color: white;
+}
