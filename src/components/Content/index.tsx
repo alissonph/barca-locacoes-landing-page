@@ -71,6 +71,7 @@ export default function Content() {
       <h1 ref={contactRef}>CONTATO</h1>
       <div className={styles.contactContainer}>
         <iframe
+          title="Mapa de Artur Nogueira"
           className={styles.map}
           src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Artur+Nogueira+-+S%C3%A3o+Paulo,+Rep%C3%BAblica+Federativa+do+Brasil&amp;aq=3&amp;oq=Ar&amp;sll=37.09024,-95.537109&amp;sspn=48.287373,107.138672&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Artur+Nogueira+-+S%C3%A3o+Paulo,+Rep%C3%BAblica+Federativa+do+Brasil&amp;z=12&amp;ll=-22.573136,-47.172433&amp;output=embed"
         ></iframe>
