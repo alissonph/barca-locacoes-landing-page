@@ -72,12 +72,6 @@ export default function ContactForm() {
         </span>
         <span>Telefone: (19) 3877-2438</span>
         <span>Celular: (19) 99694-6870 VIVO</span>
-        <span>
-          E-mail:{" "}
-          <a href="mailto:contato@barcalocacoes.com.br">
-            contato@barcalocacoes.com.br
-          </a>
-        </span>
       </div>
       <button
         className={styles.buttonWhatsapp}
