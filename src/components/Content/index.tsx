@@ -64,7 +64,7 @@ export default function Content() {
               <li>Toalhas em várias cores. Tecido especial.</li>
             </ul>
           </div>
-          <img src={`${prefix}/400x400.png`} alt="Imagem" />
+          <img src={`${prefix}/thumb_cadeira.jpg`} alt="Imagem" />
         </div>
       </div>
 

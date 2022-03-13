@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+@import "../../styles/global.mixins.scss";
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #ccc;
+  border-right-color: $secondary-color;
+  animation: spinner-transform 1s infinite linear;
+}
+
+@keyframes spinner-transform {
+  to {
+    transform: rotate(1turn);
+  }
+}

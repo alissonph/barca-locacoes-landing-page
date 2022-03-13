@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { prefix } from "../../utils/prefix";
+import Loading from "../Loading";
 
 import styles from "./styles.module.scss";
 
@@ -14,6 +16,7 @@ type ContactForm = {
 };
 
 export default function ContactForm() {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -28,6 +31,7 @@ export default function ContactForm() {
     data.message = `Nome: ${data.name} - Telefone: ${data.phone} - Mensagem: ${data.message}`;
 
     try {
+      setLoading(true);
       await fetch("/api/contact", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -48,6 +52,8 @@ export default function ContactForm() {
         position: "bottom-center",
         autoClose: 5000,
       });
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -125,7 +131,7 @@ export default function ContactForm() {
           </div>
 
           <button type="submit" className={styles.buttonSend}>
-            Enviar
+            {loading ? <Loading /> : "Enviar"}
           </button>
         </form>
       </div>
