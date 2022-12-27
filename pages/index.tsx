@@ -1,16 +1,13 @@
-import { useRef } from "react";
-import Head from "next/head";
+import Head from 'next/head';
 
-import Header from "../src/components/Header";
-import TitleContent from "../src/components/TitleContent";
-import Content from "../src/components/Content";
-import Footer from "../src/components/Footer";
+import Header from '../src/components/Header';
+import TitleContent from '../src/components/TitleContent';
+import Content from '../src/components/Content';
+import Footer from '../src/components/Footer';
 
-import styles from "../src/styles/Home.module.scss";
+import styles from '../src/styles/Home.module.scss';
 
 export default function Home() {
-  const contentRef = useRef<typeof Content>(null);
-
   return (
     <div className={styles.container}>
       <Head>

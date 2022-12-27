@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useState } from 'react';
 
 type HomeContextData = {
   isScrollingToAboutUs: boolean;
@@ -39,8 +39,7 @@ export function HomeContextProvider({ children }: HomeContextProviderProps) {
         isScrollingToContact,
         scrollToContact,
         finishScroll,
-      }}
-    >
+      }}>
       {children}
     </HomeContext.Provider>
   );

@@ -1,4 +1,4 @@
-import sgMail from '@sendgrid/mail'
+import sgMail from '@sendgrid/mail';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const EMAIL_API_KEY = process.env.EMAIL_API_KEY || '';
@@ -6,7 +6,7 @@ sgMail.setApiKey(EMAIL_API_KEY);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { subject, message, name } = req.body
+    const { subject, message, name } = req.body;
     const msg = {
       to: 'rolandoh@outlook.com.br',
       from: 'contato.barcalocacoes@gmail.com',

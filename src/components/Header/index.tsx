@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { useHome } from "../../contexts/HomeContext";
-import { prefix } from "../../utils/prefix";
+import { useState } from 'react';
+import { useHome } from '../../contexts/HomeContext';
+import { prefix } from '../../utils/prefix';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
 export default function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -18,21 +18,13 @@ export default function Header() {
       <img src={`${prefix}/logo.png`} alt="Logotipo da empresa" />
 
       <nav>
-        <button
-          type="button"
-          className={styles.toggleMenu}
-          onClick={toggleMenu}
-        >
+        <button type="button" className={styles.toggleMenu} onClick={toggleMenu}>
           <img
-            src={
-              menuActive
-                ? `${prefix}/close_icon.svg`
-                : `${prefix}/menu_icon.svg`
-            }
+            src={menuActive ? `${prefix}/close_icon.svg` : `${prefix}/menu_icon.svg`}
             alt="Ícone para abrir e fechar o menu no celular"
           />
         </button>
-        <ul className={menuActive ? styles.active : ""}>
+        <ul className={menuActive ? styles.active : ''}>
           <li onClick={scrollToAboutUs}>Sobre</li>
           <li onClick={scrollToContact}>Contato</li>
         </ul>
