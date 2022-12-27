@@ -22,7 +22,7 @@ export default function ContactForm() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm<ContactForm>();
 
   async function onSubmit(data: ContactForm) {
     data.subject = `Barca Locações - Contato via site - ${new Date().toLocaleString('pt-BR')}`;
